@@ -39,11 +39,11 @@ This project is designed to demonstrate practical ability in:
 
 ### Clinical Summary Figure
 
-![Clinical summary](https://raw.githubusercontent.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/main/assets/clinical-summary.png)
+![Clinical summary](https://github.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/blob/main/assets/clinical-summary.png?raw=1)
 
 ### FIR vs IIR ERP Comparison
 
-![ERP comparison](https://raw.githubusercontent.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/main/assets/erp-comparison.png)
+![ERP comparison](https://github.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/blob/main/assets/erp-comparison.png?raw=1)
 
 ## Reports
 
