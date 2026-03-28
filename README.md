@@ -25,11 +25,11 @@ The project is intended to showcase practical work in:
 
 ### Clinical Summary Figure
 
-![Clinical summary](assets/clinical-summary.png)
+![Clinical summary](https://raw.githubusercontent.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/main/assets/clinical-summary.png)
 
 ### FIR vs IIR ERP Comparison
 
-![ERP comparison](assets/erp-comparison.png)
+![ERP comparison](https://raw.githubusercontent.com/JustinZHAO-05/medical-signal-filtering-erp-analysis/main/assets/erp-comparison.png)
 
 ## Reports
 
