@@ -1,16 +1,23 @@
 # Medical Signal Filtering for ERP Analysis
 
-This repository presents a complete signal-processing project on **IIR/FIR filter design and ERP analysis** using real EEG data. It was developed as a course laboratory project and is organized as a reproducible Python workflow with final reports in both Chinese and English.
-
-The project is intended to showcase practical work in:
-
-- digital filter design and comparison
-- EEG/ERP preprocessing
-- time-domain and frequency-domain interpretation
-- reproducible computational reporting
+This repository showcases a complete laboratory project on **IIR/FIR filter design, EEG preprocessing, and ERP interpretation** using real EEG data. It combines quantitative filter analysis, waveform-level ERP comparison, and bilingual technical reporting in a reproducible Python workflow.
 
 **Author:** Yanzhe Zhao  
 **Institution:** School of Future Technology, Tianjin University
+
+## At a Glance
+
+- English full report: [`output_en/report/medical_signal_filter_report_en.pdf`](output_en/report/medical_signal_filter_report_en.pdf)
+- English summary: [`output_en/report/summary_en.pdf`](output_en/report/summary_en.pdf)
+- Chinese full report: [`output/report/medical_signal_filter_report.pdf`](output/report/medical_signal_filter_report.pdf)
+- Chinese summary: [`output/report/summary.pdf`](output/report/summary.pdf)
+
+This project is designed to demonstrate practical ability in:
+
+- digital filter design and comparison
+- EEG/ERP preprocessing and interpretation
+- frequency-domain and time-domain reasoning
+- quantitative reporting and reproducible scientific workflows
 
 ## Project Highlights
 
@@ -20,6 +27,13 @@ The project is intended to showcase practical work in:
 - Designed FIR filters with three methods: window design, frequency sampling, and equiripple approximation.
 - Compared FIR and IIR band-pass filtering on real ERP data, including delay compensation and its impact on waveform interpretation.
 - Produced polished Chinese and English PDF reports plus one-page summaries for presentation purposes.
+
+## Selected Quantitative Results
+
+- Under matched low-pass specifications, the minimum IIR orders were **13 (Butterworth)**, **7 (Chebyshev-I)**, **7 (Chebyshev-II)**, and **5 (Elliptic)**.
+- In the causal vs zero-phase experiment, the estimated delay relative to the 10 Hz reference was **22 ms** for single causal filtering, **43 ms** for repeated causal filtering, and **0 ms** for zero-phase filtering.
+- In the FIR method comparison, the shortest valid designs required **163 taps** (window-Hamming), **3715 taps** (frequency sampling), and **89 taps** (equiripple).
+- In the ERP band-pass comparison, FIR filtering introduced a fixed delay of **1900 ms** that could be compensated globally, whereas the compared IIR filter showed a highly variable group delay and an uncompensated ERP peak near **399 ms**.
 
 ## Visual Preview
 
@@ -37,6 +51,14 @@ The project is intended to showcase practical work in:
 - Chinese one-page summary: [`output/report/summary.pdf`](output/report/summary.pdf)
 - English full report: [`output_en/report/medical_signal_filter_report_en.pdf`](output_en/report/medical_signal_filter_report_en.pdf)
 - English summary: [`output_en/report/summary_en.pdf`](output_en/report/summary_en.pdf)
+
+## Why This Project Matters
+
+This project addresses a question that matters beyond filter design itself:
+
+> in biomedical signal processing, a filter is not only a preprocessing tool. It can directly change waveform amplitude, latency, slow-wave morphology, and therefore the interpretation of clinically meaningful events.
+
+For ERP analysis, this means that filter selection is part of the scientific result rather than a purely technical background step.
 
 ## Repository Structure
 
@@ -96,16 +118,21 @@ python3 scripts/build_report_en.py
 2. Window-function and filter-length comparison
 3. FIR vs IIR band-pass filtering on ERP waveforms
 
-## Why This Project Matters
+## Skills Demonstrated
 
-This project is not only about designing filters that satisfy frequency-domain specifications. It also demonstrates a key methodological point in biomedical signal processing:
-
-> the choice of filter can directly change waveform amplitude, latency, slow-wave morphology, and therefore the interpretation of clinically meaningful events.
-
-For ERP analysis, this means that filter selection is part of the scientific result, not just a preprocessing detail.
+- Specification-driven IIR and FIR filter design
+- EEG event handling, re-referencing, and baseline correction
+- ERP averaging and waveform feature extraction
+- Quantitative comparison of amplitude, latency, ripple, attenuation, and group delay
+- Figure design and report production for both technical and non-technical audiences
 
 ## Notes
 
 - The repository includes the original course documents and data used in the project.
 - Final reports are kept in the repository for direct viewing and evaluation.
 - Intermediate caches, temporary screenshots, and compiler residue are intentionally excluded from version control.
+- The original course handouts, sample code, and provided EEG dataset remain under their original ownership/terms; see the license note below.
+
+## License
+
+The original source code and report writing contributed in this repository are released under the [MIT License](LICENSE). Original course materials, provided datasets, and reference examples are included for academic reproducibility and remain subject to their original ownership and usage conditions.
