@@ -1,0 +1,3 @@
+﻿Filter,Taps / order,Fixed delay (samples),GD metric (ms),PB ripple (dB),Low-stop atten. (dB),High-stop atten. (dB)
+FIR Equiripple,3801,1900,1900.0,0.986352519628428,43.26033396438344,47.675701749181634
+IIR Butterworth,4,--,25.769 ± 52.814,3.0001730921581875,25.586828083275744,8.804170188966461
