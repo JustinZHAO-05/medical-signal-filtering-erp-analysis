@@ -1,0 +1,34 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[a4paper,margin=2.1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{indentfirst}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\newfontfamily\zhfont[AutoFakeBold=2]{Droid Sans Fallback}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\setlength{\parskip}{0.6em}
+\setlength{\parindent}{2em}
+\graphicspath{{output/figures/}}
+\title{{\zhfont 医学信号滤波实验报告}}
+\author{{\zhfont 赵彦喆 \quad 未来技术学院 \quad 学号 }3023006059}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\input{output/report/body.tex}
+\end{document}
