@@ -1,7 +1,8 @@
+import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "0 数据及例程"
+DATA_DIR = Path(os.environ.get("ERP_DATA_DIR", ROOT / "data" / "external")).expanduser()
 SUB7A_PATH = DATA_DIR / "sub7A.mat"
 LOC_PATH = DATA_DIR / "64-channels.loc"
 

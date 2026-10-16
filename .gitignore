@@ -43,3 +43,9 @@ output_en/report/summary_en_build.pdf
 
 output/tables/*.tex
 output_en/tables/*.tex
+
+# User-supplied external EEG and teaching materials
+/data/
+/0 数据及例程/
+*.mat
+*.loc

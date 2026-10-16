@@ -64,7 +64,7 @@ For ERP analysis, this means that filter selection is part of the scientific res
 
 ```text
 .
-├── 0 数据及例程/               # Original EEG data, channel locations, and reference example
+├── data/external/             # User-supplied EEG (not distributed)
 ├── medsiglab/                 # Core data I/O, filtering, ERP, plotting, and reporting utilities
 ├── scripts/                   # Entry points and experiment/report pipelines
 ├── report/                    # Chinese LaTeX template
@@ -72,8 +72,6 @@ For ERP analysis, this means that filter selection is part of the scientific res
 ├── output/                    # Chinese figures, tables, and final PDFs
 ├── output_en/                 # English tables and final PDFs
 ├── assets/                    # README preview images
-├── 1 实验任务书.pdf            # Original assignment brief
-├── 2 脑电数据介绍及例程.pdf    # EEG data description and reference workflow
 └── requirements.txt           # Python dependencies
 ```
 
@@ -84,6 +82,12 @@ For ERP analysis, this means that filter selection is part of the scientific res
 ```bash
 pip install -r requirements.txt
 ```
+
+### Supply external EEG
+
+The course handouts, teaching example and provided EEG data are not redistributed. Obtain `sub7A.mat` and `64-channels.loc` from an authorized source (for the original course dataset, request access from its provider). Put both in `data/external/`, or set `ERP_DATA_DIR` to their directory. No third-party example script is needed.
+
+The loader expects MATLAB fields `EEGdata1`, `EEGdata2` (channels × time), `class_labels` and `trigger_positions`, a 250 Hz sample rate, and a location text file with channel labels in column 4, including FZ, TP7 and TP8. Other datasets require an explicit adapter and matching event labels.
 
 ### Run the full Chinese workflow
 
@@ -128,11 +132,11 @@ python3 scripts/build_report_en.py
 
 ## Notes
 
-- The repository includes the original course documents and data used in the project.
+- The repository contains original code, authored reports and generated analysis figures; external course materials and raw EEG are excluded.
 - Final reports are kept in the repository for direct viewing and evaluation.
 - Intermediate caches, temporary screenshots, and compiler residue are intentionally excluded from version control.
-- The original course handouts, sample code, and provided EEG dataset remain under their original ownership/terms; see the license note below.
+- Full ERP reproduction requires the external EEG described above. Core filter-design functions can be imported and used with synthetic signals.
 
 ## License
 
-The original source code and report writing contributed in this repository are released under the [MIT License](LICENSE). Original course materials, provided datasets, and reference examples are included for academic reproducibility and remain subject to their original ownership and usage conditions.
+The original source code and report writing contributed in this repository are released under the [MIT License](LICENSE). Third-party course materials, provided datasets and reference examples are not included; obtain them separately under their original terms.

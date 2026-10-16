@@ -48,6 +48,9 @@ def load_sub7a_dataset(
 ) -> ERPDataset:
     mat_path = mat_path or config.SUB7A_PATH
     loc_path = loc_path or config.LOC_PATH
+    for path in (mat_path, loc_path):
+        if not path.is_file():
+            raise FileNotFoundError(f"Missing external EEG resource: {path}. Supply your own authorized data and set ERP_DATA_DIR; see README.md.")
     raw = io.loadmat(mat_path)
     # The dataset is distributed as two continuous blocks rather than pre-cut epochs.
     blocks = [np.asarray(raw["EEGdata1"], dtype=float), np.asarray(raw["EEGdata2"], dtype=float)]

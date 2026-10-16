@@ -485,7 +485,7 @@ def build_report_body(metrics: dict) -> str:
         r"\path{code/requirements.txt} 给出复现实验所需的 Python 依赖。该组织方式便于在不重跑全部内容的情况下单独调试某一部分实验、图表或文档。"
     )
     text += reporting.paragraph(
-        r"代码复现步骤如下：首先将课程提供的原始数据目录“0 数据及例程/”放在项目根目录，确保其中包含 \path{sub7A.mat}、\path{64-channels.loc} 及示例程序；随后进入 \path{code/} 目录并安装依赖："
+        r"代码复现步骤如下：首先自行合法获取原始数据，将 \path{sub7A.mat} 与 \path{64-channels.loc} 放入 \path{data/external/}，或设置环境变量 ERP\_DATA\_DIR；本仓库不分发第三方数据或示例程序。随后在项目根目录安装依赖："
     )
     text += reporting.paragraph(r"\noindent\hspace*{2em}\texttt{pip install -r requirements.txt}")
     text += reporting.paragraph(
